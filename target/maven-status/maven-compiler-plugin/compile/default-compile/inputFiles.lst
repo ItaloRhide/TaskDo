@@ -1,0 +1,14 @@
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/config/SecurityConfig.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/repository/UsuarioRepository.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/controller/HomeController.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/config/WebConfig.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/controller/TarefaController.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/model/Tarefa.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/config/H2ConsoleSecurityConfig.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/service/UsuarioService.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/service/TarefaService.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/repository/TarefaRepository.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/model/Usuario.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/controller/AuthController.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/config/DataInitializer.java
+/home/ubuntu/kanban-app-spring/task-do/src/main/java/br/ueg/desenvolvimento/web/task_do/TaskDoApplication.java

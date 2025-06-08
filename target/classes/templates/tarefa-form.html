@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Do - Criar tarefa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Task Do</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/tarefas}">Tarefas</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <span class="text-white me-3" th:text="${#authentication.name}"></span>
+                    <form th:action="@{/logout}" method="post">
+                        <button type="submit" class="btn btn-outline-light">Sair</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 th:text="${tarefa.id == null ? 'Nova Tarefa' : 'Editar Tarefa'}"></h3>
+                    </div>
+                    <div class="card-body">
+                        <form th:action="${tarefa.id == null ? '/tarefas/nova' : '/tarefas/editar/' + tarefa.id}" method="post">
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" th:value="${tarefa.titulo}" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="descricao" name="descricao" rows="3" th:text="${tarefa.descricao}"></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="dataVencimento" class="form-label">Data de Vencimento</label>
+                                <input type="date" class="form-control" id="dataVencimento" name="dataVencimento" 
+                                       th:value="${tarefa.dataVencimento}" required>
+                            </div>
+                            
+                            <!-- Campo de seleção de status (apenas para edição) -->
+                            <div class="mb-3" th:if="${tarefa.id != null && statusOptions != null}">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-select" id="status" name="status">
+                                    <option th:each="statusOption : ${statusOptions}" 
+                                            th:value="${statusOption}" 
+                                            th:text="${statusOption.descricao}"
+                                            th:selected="${tarefa.status == statusOption}">
+                                    </option>
+                                </select>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <a th:href="@{/tarefas}" class="btn btn-secondary">Cancelar</a>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

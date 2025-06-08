@@ -1,0 +1,15 @@
+br/ueg/desenvolvimento/web/task_do/repository/UsuarioRepository.class
+br/ueg/desenvolvimento/web/task_do/service/TarefaService.class
+br/ueg/desenvolvimento/web/task_do/config/H2ConsoleSecurityConfig.class
+br/ueg/desenvolvimento/web/task_do/controller/HomeController.class
+br/ueg/desenvolvimento/web/task_do/config/SecurityConfig.class
+br/ueg/desenvolvimento/web/task_do/service/UsuarioService.class
+br/ueg/desenvolvimento/web/task_do/config/DataInitializer.class
+br/ueg/desenvolvimento/web/task_do/model/Tarefa$StatusTarefa.class
+br/ueg/desenvolvimento/web/task_do/TaskDoApplication.class
+br/ueg/desenvolvimento/web/task_do/model/Usuario.class
+br/ueg/desenvolvimento/web/task_do/model/Tarefa.class
+br/ueg/desenvolvimento/web/task_do/controller/AuthController.class
+br/ueg/desenvolvimento/web/task_do/repository/TarefaRepository.class
+br/ueg/desenvolvimento/web/task_do/controller/TarefaController.class
+br/ueg/desenvolvimento/web/task_do/config/WebConfig.class
